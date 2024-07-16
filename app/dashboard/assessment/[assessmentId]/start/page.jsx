@@ -9,8 +9,6 @@ function StartAssessment({ params }) {
   const [assessmentData, setAssessmentData] = useState({});
   const [mockAssessmentQuestions, setMockAssessmentQuestions] = useState([]);
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
-  const [timeTaken, setTimeTaken] = useState({});
-  const totalTime = assessmentData?.assessmentQuestions * 40;
 
   useEffect(() => {
     getAssessmentDetails();

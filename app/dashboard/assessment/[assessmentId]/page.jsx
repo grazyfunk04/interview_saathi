@@ -68,7 +68,7 @@ function Assessment({ params }) {
               <strong>Information</strong>
             </h2>
             <h2 className="mt-5 text-yellow-500">
-              {process.env.NEXT_PUBLIC_INFORMTION}
+              {process.env.NEXT_PUBLIC_ASSESSMENT_INFORMTION}
             </h2>
             <h2 className="mt-5 text-black flex items-center gap-2">
               <TimerReset />

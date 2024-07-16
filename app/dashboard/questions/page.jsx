@@ -58,7 +58,7 @@ function Questions() {
 
       <div>
         {faqs.map((item, index)=>(
-          <Collapsible className="mt-8">
+          <Collapsible className="mt-8" key={index}>
             <CollapsibleTrigger className="p-2 bg-secondary rounded-lg my-2 text-left flex justify-between gap-7 w-full">
              {`Question: ${item.question}` } <ChevronsUpDown className="h-5 w-5" />
             </CollapsibleTrigger>

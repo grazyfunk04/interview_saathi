@@ -284,6 +284,7 @@ function QuestionSection({
   const router = useRouter();
   const [totalQuestion, setTotalQuestion] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
+  const [bgColor, setBgColor] = useState('');
 
   const userEmail = user?.primaryEmailAddress?.emailAddress;
   const plunk = new Plunk(process.env.NEXT_PUBLIC_PLUNK_API_KEY);
@@ -576,9 +577,9 @@ function QuestionSection({
             {mockAssessmentQuestions.map((question, index) => (
               <h2
                 key={index}
-                className={`p-3 bg-secondary rounded-full text-xs md:text-sm text-center cursor-pointer ${
+                className={`p-3 rounded-full text-xs md:text-sm text-center cursor-pointer ${
                   activeQuestionIndex === index && "text-white bg-yellow-500"
-                } ${userAnswers[index] ? 'text-white bg-blue-600' : ''}`}
+                } ${userAnswers[index] ? 'text-white bg-green-500' : 'bg-secondary'}`}
                 onClick={() => handleQuestionChange(index)}
               >
                 {index + 1}

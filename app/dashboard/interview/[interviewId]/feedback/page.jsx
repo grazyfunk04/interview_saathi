@@ -40,7 +40,7 @@ function Feedback({ params }) {
         temp = temp + item.rating
       ));
 
-      return (temp / feedbackList.length);
+      return (temp / feedbackList.length) ? feedbackList.length > 0 : 0;
     }
 
     setTotalRating(getRating());

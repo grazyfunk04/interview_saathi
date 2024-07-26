@@ -50,6 +50,10 @@ function Interview({ params }) {
                   <strong>Years of Experience:</strong>{" "}
                   {interviewData?.jobExperience}
                 </h2>
+                <h2 className="text-lg">
+                  <strong>Number of questions:</strong>{" "}
+                  {interviewData?.numberOfquestions}
+                </h2>
               </>
             ) : (
               <h2>Loading....</h2>

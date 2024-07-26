@@ -25,6 +25,7 @@ function AddNewInterview() {
   const [jobPosition, setJobPosition] = useState();
   const [jobDesc, setJobDesc] = useState();
   const [jobExperience, setJobExperience] = useState();
+  const [numberOfquestions, setNumberOfquestions] = useState();
   const [loading, setLoading] = useState(false);
   const [jsonResponse, setJsonResponse] = useState([]);
   const {user} = useUser();
@@ -42,6 +43,8 @@ function AddNewInterview() {
       jobDesc +
       ", Years of experience: " +
       jobExperience +
+      ", Number of questions: " +
+      numberOfquestions +
       ", depends on this information please give me " +
       process.env.NEXT_PUBLIC_INTERVIEW_QUESTIONS_COUNT +
       " interview question with answers in json format, give questions and answers as field in json";
@@ -61,6 +64,7 @@ function AddNewInterview() {
         jobPosition:jobPosition,
         jobDesc: jobDesc,
         jobExperience: jobExperience,
+        numberOfquestions: numberOfquestions,
         createdBy: user?.primaryEmailAddress?.emailAddress,
         createdAt: moment().format('DD-MM-YYYY')
       }).returning({mockId:AIInterview.mockId});
@@ -124,6 +128,16 @@ function AddNewInterview() {
                       required
                       max="50"
                       onChange={(event) => setJobExperience(event.target.value)}
+                    />
+                  </div>
+                  <div className="my-3">
+                    <label htmlFor="">Number of questions</label>
+                    <Input
+                      placeholder="Ex. 5"
+                      type="number"
+                      required
+                      max="50"
+                      onChange={(event) => setNumberOfquestions(event.target.value)}
                     />
                   </div>
                 </div>

@@ -6,6 +6,7 @@ export const AIInterview=pgTable('aiInterview', {
     jobPosition:varchar('jobPosition').notNull(),
     jobDesc:varchar('jobDesc').notNull(),
     jobExperience:varchar('jobExperience').notNull(),
+    numberOfquestions:varchar('numberOfquestions').notNull(),
     createdBy:varchar('createdBy').notNull(),
     createdAt:varchar('createdAt'),
     mockId:varchar('mockId').notNull()
